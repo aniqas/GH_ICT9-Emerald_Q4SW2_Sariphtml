@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TIME CONVERSION</title>
+	<style>
+		table{
+ 	 border: 5px;
+ 	 width: 100%;
+ 	 padding: 15px;
+ 	 text-align: left;
+ 	 border-style: double ;
+ 	 margin-top: 300px;
+ 	 border-radius: 10px;
+}
+	</style>
+</head>
+<body style="background-color: lightblue;">
+	<center>
+		<table><p>
+  <th><label>Seconds</label>
+  <input id="inputseconds" type="number" placeholder="Seconds" oninput="forminutes(this.value)" onchange="forminutes(this.value)"></th>
+	</p>
+	<td><p>Minutes: <span id="outputmn"></span></p></td>
+
+<script>
+function forminutes(valNum) {
+  document.getElementById("outputmn").innerHTML=valNum/60;
+}
+
+	</script>
+	<p>
+ <th> <label>Seconds</label>
+  <input id="inputseconds" type="number" placeholder="Seconds" oninput="forhour(this.value)" onchange="forhour(this.value)">
+	</p></th>
+	<td><p>Hours: <span id="outputhr"></span></p></td>
+
+<script>
+function forhour(valNum) {
+  document.getElementById("outputhr").innerHTML=valNum/3600;
+}
+
+	</script>
+	<p>
+  <th><label>Seconds</label>
+  <input id="inputseconds" type="number" placeholder="Seconds" oninput="forday(this.value)" onchange="forday(this.value)">
+	</p></th>
+	<td><p>Day: <span id="outputdy"></span></p></td>
+
+<script>
+function forday(valNum) {
+  document.getElementById("outputdy").innerHTML=valNum/86400
+;
+}
+
+	</script>
+</table></center>
+</body>
+</html>
